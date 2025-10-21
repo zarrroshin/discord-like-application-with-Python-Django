@@ -1,18 +1,20 @@
 from django.shortcuts import render,redirect
 from django.contrib import messages
 from django.http import HttpResponse
-from .models import Room,Topic
+from .models import Room,Topic,Message
 from django.db.models import Q
 from .forms import RoomForm
+from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate,login,logout
 from django.contrib.auth.decorators import login_required
 # Create your views here.
 def loginPage(request):
+    page = 'login'
     if request.user.is_authenticated : 
         return redirect("home")
     if request.method == "POST":
-        username = request.POST.get("username")
+        username = request.POST.get("username").lower()
         password = request.POST.get('password')
 
         try:
@@ -28,16 +30,32 @@ def loginPage(request):
             return redirect("home")
         else : 
             messages.error(request,'username or password does not exist')
-    context = {}
+    context = {"page":page}
     return render(request,"base/login_register.html",context)
 
 def logoutUser(request):
     logout(request)
     return redirect('home')
 
+
+def registerPage(request):
+    form = UserCreationForm()
+    if request.method == "POST":
+        form = UserCreationForm(request.POST)
+        if form.is_valid():
+            user = form.save(commit=False)
+            user.username = user.username.lower()
+            user.save()
+            login(request,user)
+            return redirect("home")
+        
+        else:
+            messages.error(request,'An error occured during registration')
+    return render(request,'base/login_register.html',{"form":form})
+
 def home(request):
     q  = request.GET.get('q') if request.GET.get('q') != None else ''
-    rooms = Room.objects.filter(Q(topic__name__contains = q)| Q(name__icontains=q) | Q(desctiption__icontains=q))
+    rooms = Room.objects.filter(Q(topic__name__contains = q)| Q(name__icontains=q) | Q(description__icontains=q))
     room_count = rooms.count()
     topics = Topic.objects.all()
     context = {"rooms":rooms,'topics':topics,"room_count":room_count}
@@ -45,7 +63,11 @@ def home(request):
 
 def room(request,pk):
     room = Room.objects.get(id=pk)
-    context = {"room":room}
+    room_messages = room.message_set.all().order_by('-created')
+    if request.method == "POST":
+        message = Message.objects.create(user=request.user,room=room,body=request.POST.get("body"))
+        return redirect('room',pk=room.id)
+    context = {"room":room,'room_messages':room_messages}
     return render(request,'base/room.html',context)
 
 @login_required(login_url='login')
