@@ -58,7 +58,7 @@ def home(request):
     rooms = Room.objects.filter(Q(topic__name__contains = q)| Q(name__icontains=q) | Q(description__icontains=q))
     room_count = rooms.count()
     topics = Topic.objects.all()
-    room_messages = Message.objects.all()
+    room_messages = Message.objects.filter(Q(room__topic__name__icontains=q))
 
 
 
@@ -68,7 +68,7 @@ def home(request):
 
 def room(request,pk):
     room = Room.objects.get(id=pk)
-    room_messages = room.message_set.all().order_by('-created')
+    room_messages = room.message_set.all()
     participants = room.participants.all()
     
     
