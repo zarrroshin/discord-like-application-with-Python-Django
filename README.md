@@ -28,6 +28,23 @@ A full-stack web app built using **Django** that allows users to join discussion
 
 ---
 
+## 🧠 Learning Goals
+
+This project helped me strengthen my understanding of:
+
+Django Models, Views, and Templates (MVT)
+
+Django ORM and Querysets
+
+CRUD operations
+
+Authentication and Authorization
+
+Static and Media file management
+
+HTML Template Inheritance
+
+
 ## ⚙️ Installation
 
 
@@ -54,25 +71,7 @@ python manage.py runserver
 6️⃣ Open your browser and visit:
 http://127.0.0.1:8000/
 
-‍‍‍‍‍‍‍```
 
----
 
-## 🧠 Learning Goals
 
-This project helped me strengthen my understanding of:
-
-Django Models, Views, and Templates (MVT)
-
-Django ORM and Querysets
-
-CRUD operations
-
-Authentication and Authorization
-
-Static and Media file management
-
-HTML Template Inheritance
-
----
 
