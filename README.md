@@ -1,57 +1,33 @@
-💬 Discord-like Application with Python & Django
-
-Inspired by the Traversy Media Django Crash Course
-.
-A full-stack web app built using Django that allows users to join discussion rooms, chat in real-time (conceptually), and manage profiles — similar to Discord.
-
-🚀 Features
-
-👤 User Authentication (Register, Login, Logout)
-
-💬 Create, edit, and delete chat rooms
-
-🗨️ Post and delete messages
-
-🧑‍💻 Developer profiles with bio and avatar
-
-🖼️ Upload profile and room images
-
-🧩 Admin panel for full control
-
-🏗️ Tech Stack
-Component	Technology
-Backend	Django 4+
-Frontend	HTML, CSS, JavaScript
-Database	SQLite3
-Authentication	Django built-in Auth System
-Media Handling	Django Media & Static Files
-⚙️ Installation
-1️⃣ Clone the repository
+discord-like-application-with-Python-Django Inspired by the [Traversy Media Django Crash Course](https://www.youtube.com/watch?v=UmljXZIypDc). --- ## 🚀 Features - 👤 User authentication (Register, Login, Logout) - 🧑‍💻 Developer profiles - 🗂️ Add, update, and delete projects - 💬 Message system between users - 🖼️ Upload profile pictures and project images - 🧩 Django admin panel for full control --- ## 🏗️ Tech Stack | Component | Technology | |------------|-------------| | **Backend** | Django 4+ | | **Frontend** | HTML, CSS, JavaScript | | **Database** | SQLite3 | | **Authentication** | Django built-in Auth System | | **Media Handling** | Django Media & Static Files | --- ## ⚙️ Installation ### 1️⃣ Clone the repository
+bash
 git clone https://github.com/zarrroshin/discord-like-application-with-Python-Django.git
-cd discord-like-application-with-Python-Django
-
+cd studybud
 2️⃣ Create and activate a virtual environment
+bash
+Copy code
 python -m venv venv
 source venv/bin/activate   # Mac/Linux
 venv\Scripts\activate      # Windows
-
 3️⃣ Install dependencies
+bash
+Copy code
 pip install -r requirements.txt
-
 4️⃣ Apply migrations
+bash
+Copy code
 python manage.py migrate
-
 5️⃣ Run the development server
+bash
+Copy code
 python manage.py runserver
-
 6️⃣ Open your browser and visit:
+cpp
+Copy code
 http://127.0.0.1:8000/
-
 🧠 Learning Goals
-
 This project helped me strengthen my understanding of:
 
-Django Models, Views, and Templates (MVT)
+Django Models, Views, Templates (MVT)
 
 Django ORM and Querysets
 
@@ -72,10 +48,7 @@ HTML Template Inheritance
 ☁️ Deploy to Render / Railway / Vercel
 
 👩‍💻 Author
-
 Zahra Roshani
 📧 zahraroshani973@gmail.com
-
 🌐 GitHub
-
 💼 LinkedIn
