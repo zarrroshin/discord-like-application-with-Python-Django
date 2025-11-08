@@ -1,32 +1,37 @@
-💬 Discord-like Application with Python & Django
+# 💬 Discord-like Application with Python & Django
 
-Inspired by the Traversy Media Django Crash Course
-.
-A full-stack web app built using Django that allows users to join discussion rooms, chat in real-time (conceptually), and manage profiles — similar to Discord.
+Inspired by the [Traversy Media Django Crash Course](https://www.youtube.com/watch?v=UmljXZIypDc).  
+A full-stack web app built using **Django** that allows users to join discussion rooms, chat in real-time (conceptually), and manage profiles — similar to Discord.
 
-🚀 Features
+---
 
-👤 User Authentication (Register, Login, Logout)
+## 🚀 Features
 
-💬 Create, edit, and delete chat rooms
+- 👤 User Authentication (Register, Login, Logout)  
+- 💬 Create, edit, and delete chat rooms  
+- 🗨️ Post and delete messages  
+- 🧑‍💻 Developer profiles with bio and avatar  
+- 🖼️ Upload profile and room images  
+- 🧩 Admin panel for full control  
 
-🗨️ Post and delete messages
+---
 
-🧑‍💻 Developer profiles with bio and avatar
+## 🏗️ Tech Stack
 
-🖼️ Upload profile and room images
+| Component       | Technology                     |
+|-----------------|--------------------------------|
+| **Backend**     | Django 4+                      |
+| **Frontend**    | HTML, CSS, JavaScript          |
+| **Database**    | SQLite3                         |
+| **Authentication** | Django built-in Auth System  |
+| **Media Handling** | Django Media & Static Files   |
 
-🧩 Admin panel for full control
+---
 
-🏗️ Tech Stack
-Component	Technology
-Backend	Django 4+
-Frontend	HTML, CSS, JavaScript
-Database	SQLite3
-Authentication	Django built-in Auth System
-Media Handling	Django Media & Static Files
-⚙️ Installation
-1️⃣ Clone the repository
+## ⚙️ Installation
+
+### 1️⃣ Clone the repository
+```bash
 git clone https://github.com/zarrroshin/discord-like-application-with-Python-Django.git
 cd discord-like-application-with-Python-Django
 
