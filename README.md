@@ -30,7 +30,8 @@ A full-stack web app built using **Django** that allows users to join discussion
 
 ## ⚙️ Installation
 
-### 1️⃣ Clone the repository
+### 
+1️⃣ Clone the repository
 ```bash
 git clone https://github.com/zarrroshin/discord-like-application-with-Python-Django.git
 cd discord-like-application-with-Python-Django
