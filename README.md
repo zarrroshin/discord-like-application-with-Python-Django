@@ -68,19 +68,3 @@ Static and Media file management
 
 HTML Template Inheritance
 
-📈 Future Improvements
-
-📨 Add notifications and messaging
-
-🌗 Implement Dark/Light theme toggle
-
-☁️ Deploy to Render / Railway / Vercel
-
-👩‍💻 Author
-
-Zahra Roshani
-📧 zahraroshani973@gmail.com
-
-🌐 GitHub
-
-💼 LinkedIn
