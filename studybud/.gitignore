@@ -1,6 +1,75 @@
-env/
-__pycache__.
-*/migrations/*
-!*/migrations/__init__.py
+# ==========================
+# Django & Python
+# ==========================
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Django stuff:
+*.log
+*.pot
+*.pyc
 db.sqlite3
+media/
+staticfiles/
+static/
+.env
+
+# If you use Django migrations, don’t ignore all of them!
+# But you can ignore pycache inside migration folders:
+*/migrations/__pycache__/
+
+# ==========================
+# Virtual environment
+# ==========================
+
+venv/
+env/
+.venv/
+.env/
+ENV/
+env.bak/
+venv.bak/
+
+# ==========================
+# IDEs and editors
+# ==========================
+
+# VSCode
 .vscode/
+
+# PyCharm
+.idea/
+
+# ==========================
+# OS generated files
+# ==========================
+
+.DS_Store
+Thumbs.db
+
+# ==========================
+# MyPy / Pytest / Coverage
+# ==========================
+
+.mypy_cache/
+.pytest_cache/
+.coverage
+htmlcov/
+
+# ==========================
+# Docker (if you use it)
+# ==========================
+
+*.pid
+*.seed
+*.log
+*.bak
+*.swp
+*.swo
+docker-compose.override.yml
